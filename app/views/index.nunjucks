@@ -1,0 +1,26 @@
+{% extends 'layout.nunjucks' %}
+
+{% block content %}
+  <h1>{{ title }}</h1>
+  <p>Welcome to {{ title }}</p>
+  {{cube}}
+<form id="updateForm" action="update" method="post">
+    <div>
+        <label for="x">X: </label>
+        <input type="number" required id="x" name="x"></input>
+    </div>
+    <div>
+        <label for="y">Y: </label>
+        <input type="number" required id="y" name="y"></input>
+    </div>
+    <div>
+        <label for="z">Z: </label>
+        <input type="number" required id="z" name="z"></input>
+    </div>
+    <div>
+        <label for="W">W: </label>
+        <input type="number" required id="W" name="W"></input>
+    </div>
+<input type="submit" value="Submit"></input>
+</form>
+{% endblock %}
