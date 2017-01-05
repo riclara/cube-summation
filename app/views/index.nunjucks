@@ -6,6 +6,12 @@
   {{cube}}
   <h3> Update </h3>
   </hr>
+  {% if error_update_msg %}
+  <h4 class="error_msg"> {{error_update_msg}}  </h4>
+{% endif %}
+{% if ok_update_msg %}
+  <h4 class="ok_msg">{{ok_update_msg}}: {{cell}} </h4>
+{% endif %}
 <form id="updateForm" action="update" method="post">
     <div>
         <label for="x">X: </label>

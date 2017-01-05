@@ -6,3 +6,11 @@ body {
 a {
   color: #00B7FF;
 }
+
+.error_msg {
+  color: red;
+}
+
+.ok_msg {
+  color: green;
+}
