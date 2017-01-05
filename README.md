@@ -45,4 +45,4 @@ La implementación se encuentra en el directorio app y esta separado en sus resp
 
 **Servicio - app/services/cube.service.js**: Contiene la lógica del negocio, ejecuta las rutinas necesarias y se encarga de invocar la persistencia.
 
-**Vista - app/views/* **: Son los templates que se construyen como la interfase de usuario.
+**Vista - app/views/.nunjucks**: Son los templates que se construyen como la interfase de usuario.
