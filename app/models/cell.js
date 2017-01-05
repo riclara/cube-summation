@@ -16,4 +16,3 @@ CellSchema.virtual('date')
   });
 
 mongoose.model('Cell', CellSchema);
-

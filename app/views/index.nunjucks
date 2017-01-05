@@ -4,6 +4,8 @@
   <h1>{{ title }}</h1>
   <p>Welcome to {{ title }}</p>
   {{cube}}
+  <h3> Update </h3>
+  </hr>
 <form id="updateForm" action="update" method="post">
     <div>
         <label for="x">X: </label>
@@ -23,4 +25,42 @@
     </div>
 <input type="submit" value="Submit"></input>
 </form>
+
+  <h3> Query </h3>
+  </hr>
+  <form id="queryForm" action="query" method="post">
+    <div>
+        <label for="x1">X1: </label>
+        <input type="number" required id="x1" name="x1"></input>
+    </div>
+    <div>
+        <label for="y1">Y1: </label>
+        <input type="number" required id="y1" name="y1"></input>
+    </div>
+    <div>
+        <label for="z1">Z1: </label>
+        <input type="number" required id="z1" name="z1"></input>
+    </div>
+
+    <div>
+        <label for="x2">X2: </label>
+        <input type="number" required id="x2" name="x2"></input>
+    </div>
+    <div>
+        <label for="y2">Y2: </label>
+        <input type="number" required id="y2" name="y2"></input>
+    </div>
+    <div>
+        <label for="z2">Z2: </label>
+        <input type="number" required id="z2" name="z2"></input>
+    </div>
+    
+<input type="submit" value="Submit"></input>
+</form>
+
+{% if sum %}
+  Sum = {{sum.W}}
+{% endif %}
+  
+
 {% endblock %}
