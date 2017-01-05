@@ -4,6 +4,8 @@
   <h1>{{ title }}</h1>
   <p>Welcome to {{ title }}</p>
   {{cube}}
+
+
   <h3> Update </h3>
   </hr>
   {% if error_update_msg %}
@@ -31,6 +33,8 @@
     </div>
 <input type="submit" value="Submit"></input>
 </form>
+
+
 
   <h3> Query </h3>
   </hr>
@@ -67,6 +71,19 @@
 {% if sum %}
   Sum = {{sum.W}}
 {% endif %}
+
+
+<h3> Clean </h3>
+  </hr>
+  {% if error_clean_msg %}
+  <h4 class="error_msg"> {{error_clean_msg}}  </h4>
+{% endif %}
+{% if ok_clean_msg %}
+  <h4 class="ok_msg">{{ok_clean_msg}} </h4>
+{% endif %}
+<form id="cleanForm" action="clean" method="get">
+<input type="submit" value="Clean Cube"></input>
+</form>
   
 
 {% endblock %}

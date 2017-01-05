@@ -36,3 +36,12 @@ exports.query = function (pos, cb) {
         }
     })
 };
+
+exports.clean = function (cb) {
+    Cell.remove({}, function (err, data) {
+        if (err) {
+            return cb(err)
+        }
+        return cb(null, data)
+    })
+};

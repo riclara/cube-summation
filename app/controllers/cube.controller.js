@@ -6,6 +6,7 @@ var express = require('express'),
 
 module.exports = function (app) {
   app.get('/', index);
+  app.get('/clean', clean);
   app.get('/update', index);
   app.get('/query', index);
   app.post('/update', update);
@@ -40,6 +41,22 @@ function query(req, res, next) {
     res.render('index', {
       title: 'cube summation',
       sum: data
+    });
+  })
+};
+
+function clean(req, res, next) {
+  service.clean(function (err, data) {
+    if (err) {
+      res.render('index', {
+      title: 'cube summation',
+      error_clean_msg: err,
+    });
+    }
+    res.render('index', {
+      title: 'cube summation',
+      ok_clean_msg: 'Cube was cleaned',
+      resp: data
     });
   })
 };
